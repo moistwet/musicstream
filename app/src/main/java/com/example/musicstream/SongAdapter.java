@@ -33,14 +33,21 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Myview holder, int position) {
+    public void onBindViewHolder(@NonNull Myview holder,final int position) {
         Song song = songs.get(position);
         TextView artist = holder.titleArtist;
         artist.setText(song.getArtiste());
         TextView title = holder.titleTxt;
-        artist.setText(song.getTitle());
+        title.setText(song.getTitle());
         int imageId= song.getDrawable();
         holder.image.setImageResource(imageId);
+        holder.removeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                persona_album.favlist.remove(position);
+                notifyDataSetChanged();
+            }
+        });
 
     }
 
