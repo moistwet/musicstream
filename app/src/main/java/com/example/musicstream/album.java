@@ -3,7 +3,7 @@ package com.example.musicstream;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.nfc.Tag;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -12,19 +12,30 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
 public class album extends AppCompatActivity {
-    SongCollection songcollection = new SongCollection();
+    SongCollection songCollection = new SongCollection();
     static ArrayList<Song> favlist = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
+    SharedPreferences sharedPreferences;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
+        sharedPreferences = getSharedPreferences("Playlist", MODE_PRIVATE);
+        String albums = sharedPreferences.getString("list", "");
+        if (!albums.equals(""))
+        {
+            TypeToken<ArrayList<Song>> token = new TypeToken<ArrayList<Song>>(){};
+            Gson gson = new Gson();
+            favlist = gson.fromJson(albums, token.getType());
+        }
         bottomNavigationView = findViewById(R.id.bottomnav);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -48,13 +59,11 @@ public class album extends AppCompatActivity {
         });
     }
 
-    public void handleSelection(View view) {
-        //gets image id "S1001"
-        String resourceId = getResources().getResourceEntryName(view.getId());
-        int currentArrayIndex = songcollection.searchSongById(resourceId);
-        Log.d("ALERT", "handleSelection:" + currentArrayIndex);
+    public void handleSelection(View myView) {
+        String resourceId = getResources().getResourceEntryName(myView.getId());
+        int currentArrayIndex = songCollection.searchSongById(resourceId);
+        Log.d("ALERT", "The current array position is: " + currentArrayIndex);
         sendDataToActivity(currentArrayIndex);
-
     }
 
     public void sendDataToActivity(int index){
@@ -67,25 +76,21 @@ public class album extends AppCompatActivity {
 
     public void btsalbumpage(View myView)
     {
-        Intent intent = new Intent(album.this,bts_album.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_bts_album);
     }
 
     public void smalbumpage(View myView)
     {
-        Intent intent = new Intent(album.this,sm_album.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_sm_album);
     }
 
     public void personaalbumpage(View myView)
     {
-        Intent intent = new Intent(album.this,persona_album.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_persona_album);
     }
     public void bealbumpage(View myView)
     {
-        Intent intent = new Intent(album.this,be_album.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_be_album);
     }
 
     public void gotofavact(View view)
@@ -97,6 +102,22 @@ public class album extends AppCompatActivity {
 
 
         }
+    }
+
+    public void addtofav(View view) {
+        String songid = view.getContentDescription().toString();
+        //collects song id and converts to string
+        Song song = SongCollection.searchById(songid);
+        Log.d("temasek", song.toString());
+        album.favlist.add(song);
+        Log.d("temasek",album.favlist.toString());
+        Toast.makeText(this, "button is clicked", Toast.LENGTH_SHORT).show();
+        Gson gson = new Gson();
+        String json = gson.toJson(favlist);
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.putString("list", json);
+        editor.apply();
+        Log.d("gson",json);
     }
 
 }

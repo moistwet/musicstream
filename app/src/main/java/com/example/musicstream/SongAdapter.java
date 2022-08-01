@@ -1,23 +1,33 @@
 package com.example.musicstream;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
 import java.util.List;
-
-public class SongAdapter extends RecyclerView.Adapter<Myview> {
-
-    public SongAdapter(List<Song> songs) {
+import java.util.Locale;
+//search implement filterable
+public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filterable {
+    public SongAdapter(ArrayList<Song> songs) {
         this.songs = songs;
+        this.songsFiltered = songs;
     }
-
+    List<Song> songsFiltered;
     List<Song> songs;
     Context context;
 
@@ -33,8 +43,8 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Myview holder,final int position) {
-        Song song = songs.get(position);
+    public void onBindViewHolder(@NonNull Myview holder, @SuppressLint("RecyclerView") int position) {
+        Song song = songsFiltered.get(position);
         TextView artist = holder.titleArtist;
         artist.setText(song.getArtiste());
         TextView title = holder.titleTxt;
@@ -44,15 +54,54 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> {
         holder.removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                persona_album.favlist.remove(position);
+                album.favlist.remove(position);
                 notifyDataSetChanged();
+                
             }
         });
+
 
     }
 
     @Override
     public int getItemCount() {
-        return songs.size();
+        return songsFiltered.size();
+    }
+
+    //search
+
+    @Override
+    public Filter getFilter() {
+        return  new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String charString = constraint.toString();
+                if(charString.isEmpty()){
+                    songsFiltered=songs;
+                }
+                else {
+                    List<Song> filteredList = new ArrayList<Song>();
+                    for (int i = 0; i < songs.size(); i++) {
+                        if (songs.get(i).getTitle().toLowerCase().contains(charString.toLowerCase())){
+                            filteredList.add((songs.get(i)));
+                        }
+
+
+                    }
+                    songsFiltered= filteredList;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values= songsFiltered;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                songsFiltered = (List<Song>) results.values;
+                notifyDataSetChanged();
+
+            }
+        };
+
     }
 }

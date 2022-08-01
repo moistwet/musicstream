@@ -15,31 +15,7 @@
             android:name=".playlistactivity"
             android:exported="false" />
         <activity
-            android:name=".playbesongactivity"
-            android:exported="false" />
-        <activity
-            android:name=".be_album"
-            android:exported="false" />
-        <activity
-            android:name=".playpersonasongactivity"
-            android:exported="false" />
-        <activity
-            android:name=".persona_album"
-            android:exported="false" />
-        <activity
-            android:name=".playsmsongactivity"
-            android:exported="false" />
-        <activity
-            android:name=".sm_album"
-            android:exported="false" />
-        <activity
-            android:name=".playbtssongactivity"
-            android:exported="false" />
-        <activity
             android:name=".album"
-            android:exported="false" />
-        <activity
-            android:name=".bts_album"
             android:exported="false" />
         <activity
             android:name=".PlaySongActivity"
