@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/S1001"
+        android:id="@+id/S1008"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="32dp"

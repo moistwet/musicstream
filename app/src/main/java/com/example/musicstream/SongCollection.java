@@ -5,7 +5,7 @@ import static com.example.musicstream.album.favlist;
 import android.util.Log;
 
 public class SongCollection {
-    public static Song[] songs = new Song[18];
+    public static Song[] songs = new Song[19];
             public SongCollection() {
                 //be album
                 Song lifegoeson = new Song("S1001", "1.Life goes on", "BTS",
@@ -80,6 +80,12 @@ public class SongCollection {
                         "https://p.scdn.co/mp3-preview/458059573f7ac96a72702d9248477b48e9a204f0?cid=2afe87a64b0042dabf51f37318616965",
                         3.40, R.drawable.ganadara);
 
+                //new song
+
+                Song staythisway = new Song("S1019", "Stay this way", "Fromis_9",
+                        "https://p.scdn.co/mp3-preview/9b0d2912430289ce25d581db603ae1ced20fb778?cid=2afe87a64b0042dabf51f37318616965",
+                        3.26, R.drawable.staythisway);
+
 
                 songs[0]= lifegoeson;
                 songs[1]= flytomyroom;
@@ -99,6 +105,7 @@ public class SongCollection {
                 songs[15]= BlackSwan;
                 songs[16]= alliwanttodo;
                 songs[17]= ganadara;
+                songs[18]= staythisway;
 
 
             }

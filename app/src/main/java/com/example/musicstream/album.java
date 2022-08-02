@@ -36,6 +36,7 @@ public class album extends AppCompatActivity {
             Gson gson = new Gson();
             favlist = gson.fromJson(albums, token.getType());
         }
+
         bottomNavigationView = findViewById(R.id.bottomnav);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -49,6 +50,11 @@ public class album extends AppCompatActivity {
                     case R.id.library:
                         startActivity(new Intent(getApplicationContext(),
                                 album.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.search:
+                        startActivity(new Intent(getApplicationContext(),
+                                search.class));
                         overridePendingTransition(0,0);
                         return true;
 

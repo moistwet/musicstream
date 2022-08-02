@@ -2,28 +2,47 @@ package com.example.musicstream;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.SearchView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
-    SongCollection songcollection = new SongCollection();
-    ArrayList<Song> favlist = new ArrayList<>();
+public class search extends AppCompatActivity {
+    RecyclerView favList;
+    SongAdapter songAdapter;
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.loadingTheme);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search);
+        favList = findViewById(R.id.recycleView);
+
+        songAdapter = new SongAdapter(album.favlist);
+        favList.setAdapter(songAdapter);
+        favList.setLayoutManager(new LinearLayoutManager(this));
+        SearchView searchView = findViewById(R.id.searchview);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                songAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
         bottomNavigationView = findViewById(R.id.bottomnav);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -55,40 +74,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-    public void handleSelection(View view) {
-        //gets image id "S1001"
-        String resourceId = getResources().getResourceEntryName(view.getId());
-        int currentArrayIndex = songcollection.searchSongById(resourceId);
-        Log.d("ALERT", "handleSelection:" + currentArrayIndex);
-        sendDataToActivity(currentArrayIndex);
-
-    }
-
-    public void sendDataToActivity(int index){
-        Intent intent = new Intent(this, PlaySongActivity.class);
-        intent.putExtra("index", index);
-        startActivity(intent);
-    }
-
-
-
-    public void albumpage(View myView)
-    {
-        Intent intent = new Intent(MainActivity.this,album.class);
-        startActivity(intent);
-    }
-    public void gotofavact(View view)
-    {
-        for (int i = 0; i < favlist.size(); i++) {
-            Log.d("temasek",favlist.get(i).getTitle());
-
-        }
-    }
-
-
-
-
-
-    }
+}
 

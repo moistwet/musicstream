@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SearchView;
 
+
 public class playlistactivity extends AppCompatActivity {
 RecyclerView favList;
 SongAdapter songAdapter;

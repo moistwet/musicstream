@@ -56,7 +56,7 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
             public void onClick(View view) {
                 album.favlist.remove(position);
                 notifyDataSetChanged();
-                
+
             }
         });
 
