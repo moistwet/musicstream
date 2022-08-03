@@ -5,7 +5,7 @@ import static com.example.musicstream.album.favlist;
 import android.util.Log;
 
 public class SongCollection {
-    public static Song[] songs = new Song[19];
+    public static Song[] songs = new Song[34];
             public SongCollection() {
                 //be album
                 Song lifegoeson = new Song("S1001", "1.Life goes on", "BTS",
@@ -86,6 +86,72 @@ public class SongCollection {
                         "https://p.scdn.co/mp3-preview/9b0d2912430289ce25d581db603ae1ced20fb778?cid=2afe87a64b0042dabf51f37318616965",
                         3.26, R.drawable.staythisway);
 
+                //thursdays minisode
+
+                Song openingsequence = new Song("S1020", "opening sequence" , "Tommorrow By togather",
+                        "https://p.scdn.co/mp3-preview/355323e998aa099a508dac1d98ac28b52662f719?cid=2afe87a64b0042dabf51f37318616965",
+                        2.97, R.drawable.txt);
+
+                Song goodboygonebad = new Song("S1021", "Good Boy Gone Bad", "Tommorow By togather",
+                        "https://p.scdn.co/mp3-preview/cacf4e1c9786669888eaf0b4d405c33368e3245b?cid=2afe87a64b0042dabf51f37318616965",
+                        3.18, R.drawable.txt);
+
+                Song trustfundbaby = new Song("S1022", "Trust Fun Baby", "Tommorow By togather",
+                        "https://p.scdn.co/mp3-preview/be90487e08577e96e194604a591643a46d61ba21?cid=2afe87a64b0042dabf51f37318616965",
+                        3.01, R.drawable.txt);
+
+                Song lonelyboy = new Song("S1023", "Lonely Boy", "Tommorow By togather",
+                        "https://p.scdn.co/mp3-preview/94df5e2419aeb9a82fd978563d1179fe5e994a3a?cid=2afe87a64b0042dabf51f37318616965",
+                        3.21, R.drawable.txt);
+
+                Song thursdayschildhasfartogo = new Song("S1024", "Thursday's child has far to go", "Tommorow By togather",
+                        "https://p.scdn.co/mp3-preview/ca2a81aff06970748c93b4b56390b2fac4fa1f9e?cid=2afe87a64b0042dabf51f37318616965",
+                        3.52, R.drawable.txt);
+
+                //loveyourself tear
+
+                Song introsingularity = new Song("S1025", "Intro: Singularity", "BTS",
+                        "https://p.scdn.co/mp3-preview/59659bb8aba27231bf3a1530ad9592b8e8c872f9?cid=2afe87a64b0042dabf51f37318616965",
+                        3.28, R.drawable.tear);
+
+                Song fakelove = new Song("S1026", "Fake Love", "BTS",
+                        "https://p.scdn.co/mp3-preview/ba2f6a0afc23bf9f804c233d3e587009e52a14c2?cid=2afe87a64b0042dabf51f37318616965",
+                        4.04, R.drawable.tear);
+
+                Song thetruthuntold = new Song("S1027", "The Truth Untold (feat. Steve Aoki)", "BTS",
+                        "https://p.scdn.co/mp3-preview/893cee7ac1b37e0d102320c82052fdff01b09dd4?cid=2afe87a64b0042dabf51f37318616965",
+                        4.04, R.drawable.tear);
+
+                Song onethreefourthreefour = new Song("S1028", "134340", "BTS",
+                        "https://p.scdn.co/mp3-preview/ba1acaaefdbc91573e6ef6f3a9644b8c0f938d76?cid=2afe87a64b0042dabf51f37318616965",
+                        4.23, R.drawable.tear);
+
+                Song Paradise = new Song("S1029", "Paradise", "BTS",
+                        "https://p.scdn.co/mp3-preview/542ae410d05c22f6a75f84fb20c6ea856f190aac?cid=2afe87a64b0042dabf51f37318616965",
+                        3.52, R.drawable.tear);
+
+                Song lovemaze = new Song("S1030", "Love Maze", "BTS",
+                        "https://p.scdn.co/mp3-preview/6c4205f4fa495856cedbe8a4ba3d01d89d5f58a4?cid=2afe87a64b0042dabf51f37318616965",
+                        4.19, R.drawable.tear);
+
+                Song magicshop = new Song("S1031", "Magic Shop", "BTS",
+                        "https://p.scdn.co/mp3-preview/8a84d3b9d5252ed45c87a3b865926c2537ac6cc6?cid=2afe87a64b0042dabf51f37318616965",
+                        4.59, R.drawable.tear);
+
+                Song airplanept2 = new Song("S1032", "Ariplane pt.2", "BTS",
+                        "https://p.scdn.co/mp3-preview/20a977a5d9f2f71b1de174c7890c247a29e74630?cid=2afe87a64b0042dabf51f37318616965",
+                        4.04, R.drawable.tear);
+
+                Song anpanman = new Song("S1033", "Anpanman", "BTS",
+                        "https://p.scdn.co/mp3-preview/8d213a599d989ed14686a9051cb406e725b32d75?cid=2afe87a64b0042dabf51f37318616965",
+                        4.28, R.drawable.tear);
+
+                Song sowhat = new Song("S1034", "So What", "BTS",
+                        "https://p.scdn.co/mp3-preview/d2ac125318a419e49b05dbbf5066571c69f04948?cid=2afe87a64b0042dabf51f37318616965",
+                        5.09, R.drawable.tear);
+
+
+
 
                 songs[0]= lifegoeson;
                 songs[1]= flytomyroom;
@@ -106,6 +172,21 @@ public class SongCollection {
                 songs[16]= alliwanttodo;
                 songs[17]= ganadara;
                 songs[18]= staythisway;
+                songs[19]= openingsequence;
+                songs[20]= goodboygonebad;
+                songs[21]= trustfundbaby;
+                songs[22]= lonelyboy;
+                songs[23]= thursdayschildhasfartogo;
+                songs[24]= introsingularity;
+                songs[25]= fakelove;
+                songs[26]= thetruthuntold;
+                songs[27]= onethreefourthreefour;
+                songs[28]= Paradise;
+                songs[29]= lovemaze;
+                songs[30]= magicshop;
+                songs[31]= airplanept2;
+                songs[32]= anpanman;
+                songs[33]= sowhat;
 
 
             }

@@ -98,6 +98,8 @@ public class album extends AppCompatActivity {
     {
         setContentView(R.layout.activity_be_album);
     }
+    public void thursdayschildalbumpage(View myView) { setContentView(R.layout.activity_thursdayschild);}
+    public void tearalbumpage(View myView) { setContentView(R.layout.activity_tear_album);}
 
     public void gotofavact(View view)
     {

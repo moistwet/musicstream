@@ -49,6 +49,17 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/S1015"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="108dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/butter" />
+
+            <ImageView
                 android:id="@+id/S1001"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -62,7 +73,7 @@
                 android:id="@+id/textView25"
                 android:layout_width="144dp"
                 android:layout_height="27dp"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Life goes on"
                 android:textSize="20sp"
@@ -73,7 +84,7 @@
                 android:id="@+id/textView101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="9dp"
                 android:text="Bts"
                 android:textSize="15sp"
@@ -84,7 +95,7 @@
                 android:id="@+id/textView102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="6dp"
                 android:layout_marginTop="16dp"
                 android:text="Bts"
                 android:textSize="15sp"
@@ -113,22 +124,11 @@
                 app:layout_constraintStart_toEndOf="@+id/S1016"
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-            <ImageView
-                android:id="@+id/S1015"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="10dp"
-                android:onClick="handleSelection"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/S1001"
-                app:srcCompat="@drawable/butter" />
-
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="6dp"
                 android:layout_marginTop="53dp"
                 android:text="Butter"
                 android:textSize="20sp"
@@ -139,8 +139,8 @@
                 android:id="@+id/S1016"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/S1015"
