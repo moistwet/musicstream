@@ -21,7 +21,7 @@ public class album extends AppCompatActivity {
     SongCollection songCollection = new SongCollection();
     static ArrayList<Song> favlist = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
-    SharedPreferences sharedPreferences;
+    static SharedPreferences sharedPreferences;
 
 
     @Override

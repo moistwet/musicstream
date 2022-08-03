@@ -55,7 +55,14 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
             @Override
             public void onClick(View view) {
                 album.favlist.remove(position);
+                Gson gson = new Gson();
+                String json = gson.toJson(album.favlist);
+                SharedPreferences.Editor editor = album.sharedPreferences.edit();
+                editor.putString("list", json);
+                editor.apply();
+                String albums = album.sharedPreferences.getString("list","");
                 notifyDataSetChanged();
+
 
             }
         });
