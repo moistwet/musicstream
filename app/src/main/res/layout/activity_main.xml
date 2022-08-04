@@ -110,7 +110,7 @@
                 android:layout_marginTop="19dp"
                 android:text="Bts"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/S1009"
+                app:layout_constraintStart_toEndOf="@+id/S1002"
                 app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
             <TextView
@@ -158,7 +158,7 @@
                 app:srcCompat="@drawable/staythisway" />
 
             <ImageView
-                android:id="@+id/S1009"
+                android:id="@+id/S1002"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="29dp"
@@ -187,7 +187,7 @@
                 android:layout_marginTop="54dp"
                 android:text="Boy With Luv"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/S1009"
+                app:layout_constraintStart_toEndOf="@+id/S1002"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
             <TextView

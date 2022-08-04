@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 public class album extends AppCompatActivity {
     SongCollection songCollection = new SongCollection();
+    //call arraylist favlist to store songs added in addtofav function
     static ArrayList<Song> favlist = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
     static SharedPreferences sharedPreferences;
@@ -38,7 +39,7 @@ public class album extends AppCompatActivity {
         }
 
         bottomNavigationView = findViewById(R.id.bottomnav);
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.library);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
@@ -79,17 +80,15 @@ public class album extends AppCompatActivity {
     }
 
 
-
+    //onclick function code to lead to xml files(albums)
     public void btsalbumpage(View myView)
     {
         setContentView(R.layout.activity_bts_album);
     }
-
     public void smalbumpage(View myView)
     {
         setContentView(R.layout.activity_sm_album);
     }
-
     public void personaalbumpage(View myView)
     {
         setContentView(R.layout.activity_persona_album);
@@ -101,6 +100,7 @@ public class album extends AppCompatActivity {
     public void thursdayschildalbumpage(View myView) { setContentView(R.layout.activity_thursdayschild);}
     public void tearalbumpage(View myView) { setContentView(R.layout.activity_tear_album);}
 
+    //onclick function code to lead to playlistactivity
     public void gotofavact(View view)
     {
         Intent intent = new Intent(album.this,playlistactivity.class);
@@ -112,11 +112,13 @@ public class album extends AppCompatActivity {
         }
     }
 
+    //onclick function that allows songs to be added to favlist(favourite playlist)
     public void addtofav(View view) {
         String songid = view.getContentDescription().toString();
         //collects song id and converts to string
         Song song = SongCollection.searchById(songid);
         Log.d("temasek", song.toString());
+        //adds string song id to favlist arraylist
         album.favlist.add(song);
         Log.d("temasek",album.favlist.toString());
         Toast.makeText(this, "button is clicked", Toast.LENGTH_SHORT).show();

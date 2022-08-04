@@ -16,30 +16,36 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     SongCollection songcollection = new SongCollection();
-    ArrayList<Song> favlist = new ArrayList<>();
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //sets theme of loading screen to pixel 2 wallpaper
         setTheme(R.style.loadingTheme);
         setContentView(R.layout.activity_main);
+
+        //bottom navigation code
         bottomNavigationView = findViewById(R.id.bottomnav);
+        //links home id in xml file to this class
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.home:
+                        //home leads to main activity class
                         startActivity(new Intent(getApplicationContext()
                                 , MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.library:
+                        //library id leads to album class
                         startActivity(new Intent(getApplicationContext(),
                                 album.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.search:
+                        //search id leads to search class
                         startActivity(new Intent(getApplicationContext(),
                                 search.class));
                         overridePendingTransition(0,0);
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void handleSelection(View view) {
-        //gets image id "S1001"
+        //gets image id
         String resourceId = getResources().getResourceEntryName(view.getId());
         int currentArrayIndex = songcollection.searchSongById(resourceId);
         Log.d("ALERT", "handleSelection:" + currentArrayIndex);
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendDataToActivity(int index){
+        //sends from activity before to PlaySongActivity.class
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);
         startActivity(intent);
@@ -73,18 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void albumpage(View myView)
-    {
-        Intent intent = new Intent(MainActivity.this,album.class);
-        startActivity(intent);
-    }
-    public void gotofavact(View view)
-    {
-        for (int i = 0; i < favlist.size(); i++) {
-            Log.d("temasek",favlist.get(i).getTitle());
 
-        }
-    }
+
 
 
 

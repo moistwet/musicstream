@@ -43,12 +43,16 @@ public class PlaySongActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_song);
+
+
         btnPlayPause = findViewById(R.id.btnPlayPause);
         Bundle songData = this.getIntent().getExtras();
         currentindex = songData.getInt("index");
         int index = songData.getInt("Index");
         Log.d("ALERT", "we recv:" + currentindex);
         displaySongBasedOnIndex();
+
+        //progress bar
         seekBar = findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -75,17 +79,20 @@ public class PlaySongActivity extends AppCompatActivity {
 
     }
 
+    //progress bar code
     Runnable pbar = new Runnable(){
         @Override
         public void run() {
             if (player != null && player.isPlaying()){
                 seekBar.setProgress(player.getCurrentPosition());
             }
+            //everysecond the progress bar moves up
             handler.postDelayed(this, 1000);
             
         }
     };
 
+    //takes all the Song list attributes to replace the txtSongTitle,txtArtist,imgCoverArt
     public void displaySongBasedOnIndex() {
         Song song = songCollection.getCurrentSong(currentindex);
         title = song.getTitle();
@@ -99,6 +106,8 @@ public class PlaySongActivity extends AppCompatActivity {
         ImageView CoverArt = findViewById(R.id.imgCoverArt);
         CoverArt.setImageResource(drawable);
     }
+
+    //plays the song
     public void playsong(String songUrl){
         try {
             player.reset();
@@ -117,11 +126,14 @@ public class PlaySongActivity extends AppCompatActivity {
         }
     }
 
+    //resume and pause the music
     public void playOrPauseMusic(View view){
         if (player.isPlaying()) {//if player is playing
+            //pause music here
             player.pause();
             btnPlayPause.setText("PLAY");}
         else {
+            //play music here
             player.start();
             btnPlayPause.setText("PAUSE");
         }
@@ -129,6 +141,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
 
     }
+    //pauses the music when it ends
     private void gracefullyStopsWhenMusicEnds(){
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
         @Override
@@ -143,6 +156,7 @@ public class PlaySongActivity extends AppCompatActivity {
             }
             else
             {
+                //sets button text back to play
                 btnPlayPause.setText("PLAY");
             }
 
@@ -152,6 +166,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
     }
 
+    //play next song
     public void playNext(View view) {
         currentindex = songCollection.getNextSong(currentindex);
         Toast.makeText(this, "After clicking playNext, \nthe current index of this song \n" +
@@ -161,6 +176,7 @@ public class PlaySongActivity extends AppCompatActivity {
         playsong(filelink);
     }
 
+    //play previous song
     public void playPrevious(View view){
         currentindex = songCollection.getPrevSong(currentindex);
         Toast.makeText(this, "After clicking playPrevious, \n the current index of this song\n" +
@@ -183,6 +199,7 @@ public class PlaySongActivity extends AppCompatActivity {
     }
 
 
+    //repeats song
     public void repeatSong(View view) {
         if (repeatFlag){
             repeatBtn.setBackgroundResource(R.drawable.repeatoff);
@@ -195,6 +212,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
     }
 
+
+    //shuffles the song collection
     public void shuffleSong(View view) {
         if (shuffleFlag) {
             shuffleBtn.setBackgroundResource(R.drawable.shuffleoff);
@@ -205,8 +224,11 @@ public class PlaySongActivity extends AppCompatActivity {
 
         {
 
+
             shuffleBtn.setBackgroundResource(R.drawable.shuffleon);
+            //shuffles the shuffle list
             Collections.shuffle(shufflelist);
+            //list converts to array in song collection songs
             shufflelist.toArray(songCollection.songs);
 
         }

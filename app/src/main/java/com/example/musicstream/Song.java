@@ -2,7 +2,7 @@ package com.example.musicstream;
 
 public class Song {
 
-
+    //calls all the variables used in the storing of a song in SongCollection class
     private String id;
     private String title;
     private String artiste;

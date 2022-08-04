@@ -14,7 +14,7 @@ public class Myview extends RecyclerView.ViewHolder {
     public ImageView image;
     public Button removeBtn;
 
-
+    //calls out id titleTxt, titleartist, image and removeBtn to set it to link it to titleTxt, titleArtist, image, and removeBtn
     public Myview(@NonNull View itemView) {
         super(itemView);
 

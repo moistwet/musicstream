@@ -113,7 +113,7 @@
 
 
     <ImageView
-        android:id="@+id/S1012"
+        android:id="@+id/S1005"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1011"
+        android:id="@+id/S1004"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -135,7 +135,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1009"
+        android:id="@+id/S1002"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -146,7 +146,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1013"
+        android:id="@+id/S1006"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -157,7 +157,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1014"
+        android:id="@+id/S1007"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -168,7 +168,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1010"
+        android:id="@+id/S1003"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -206,7 +206,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="57dp"
         android:text="Boy With Luv"
-        app:layout_constraintStart_toEndOf="@+id/S1009"
+        app:layout_constraintStart_toEndOf="@+id/S1002"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -216,7 +216,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="51dp"
         android:text="Mikrokosmos"
-        app:layout_constraintStart_toEndOf="@+id/S1010"
+        app:layout_constraintStart_toEndOf="@+id/S1003"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
@@ -226,7 +226,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="51dp"
         android:text="Make It Right"
-        app:layout_constraintStart_toEndOf="@+id/S1011"
+        app:layout_constraintStart_toEndOf="@+id/S1004"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
@@ -236,7 +236,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="56dp"
         android:text="Home"
-        app:layout_constraintStart_toEndOf="@+id/S1012"
+        app:layout_constraintStart_toEndOf="@+id/S1005"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
@@ -246,7 +246,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="41dp"
         android:text="Jamais Vu"
-        app:layout_constraintStart_toEndOf="@+id/S1013"
+        app:layout_constraintStart_toEndOf="@+id/S1006"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
@@ -256,7 +256,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="52dp"
         android:text="Dionsysus"
-        app:layout_constraintStart_toEndOf="@+id/S1014"
+        app:layout_constraintStart_toEndOf="@+id/S1007"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView

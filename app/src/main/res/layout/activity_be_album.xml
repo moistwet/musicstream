@@ -76,7 +76,7 @@
         app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageView
-        android:id="@+id/S1009"
+        android:id="@+id/S1002"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="39dp"
@@ -87,14 +87,14 @@
         app:srcCompat="@drawable/lifegoeson" />
 
     <ImageView
-        android:id="@+id/S1010"
+        android:id="@+id/S1003"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="13dp"
         android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1009"
+        app:layout_constraintTop_toBottomOf="@+id/S1002"
         app:srcCompat="@drawable/lifegoeson" />
 
     <TextView
@@ -104,18 +104,18 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="45dp"
         android:text="Skit"
-        app:layout_constraintStart_toEndOf="@+id/S1011"
+        app:layout_constraintStart_toEndOf="@+id/S1004"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ImageView
-        android:id="@+id/S1011"
+        android:id="@+id/S1004"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="15dp"
         android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1010"
+        app:layout_constraintTop_toBottomOf="@+id/S1003"
         app:srcCompat="@drawable/lifegoeson" />
 
     <TextView
@@ -125,7 +125,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="49dp"
         android:text="fly to my room"
-        app:layout_constraintStart_toEndOf="@+id/S1009"
+        app:layout_constraintStart_toEndOf="@+id/S1002"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
@@ -139,14 +139,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/S1012"
+        android:id="@+id/S1005"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="11dp"
         android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1011"
+        app:layout_constraintTop_toBottomOf="@+id/S1004"
         app:srcCompat="@drawable/lifegoeson" />
 
     <TextView
@@ -156,7 +156,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="37dp"
         android:text="blue and grey"
-        app:layout_constraintStart_toEndOf="@+id/S1010"
+        app:layout_constraintStart_toEndOf="@+id/S1003"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
@@ -166,29 +166,29 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="46dp"
         android:text="disease"
-        app:layout_constraintStart_toEndOf="@+id/S1012"
+        app:layout_constraintStart_toEndOf="@+id/S1005"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ImageView
-        android:id="@+id/S1014"
+        android:id="@+id/S1007"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
         android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1013"
+        app:layout_constraintTop_toBottomOf="@+id/S1006"
         app:srcCompat="@drawable/lifegoeson" />
 
     <ImageView
-        android:id="@+id/S1013"
+        android:id="@+id/S1006"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1012"
+        app:layout_constraintTop_toBottomOf="@+id/S1005"
         app:srcCompat="@drawable/lifegoeson" />
 
     <TextView
@@ -198,7 +198,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="44dp"
         android:text="Stay"
-        app:layout_constraintStart_toEndOf="@+id/S1014"
+        app:layout_constraintStart_toEndOf="@+id/S1007"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <ImageView
@@ -219,7 +219,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="48dp"
         android:text="telepathy"
-        app:layout_constraintStart_toEndOf="@+id/S1013"
+        app:layout_constraintStart_toEndOf="@+id/S1006"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <ImageView

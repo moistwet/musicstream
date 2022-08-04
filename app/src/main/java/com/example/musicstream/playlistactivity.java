@@ -18,12 +18,17 @@ SongAdapter songAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlistactivity);
+        //connects favlist variable to recycleView in xml file
         favList = findViewById(R.id.recycleView);
 
         songAdapter = new SongAdapter(album.favlist);
+
         favList.setAdapter(songAdapter);
         favList.setLayoutManager(new LinearLayoutManager(this));
+
+        //search view
         SearchView searchView = findViewById(R.id.searchview);
+        //listens for text input in device
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -32,6 +37,7 @@ SongAdapter songAdapter;
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                //filters out to show songs of the text input
                 songAdapter.getFilter().filter(newText);
                 return false;
             }
@@ -41,6 +47,8 @@ SongAdapter songAdapter;
 
     }
 
+
+    //remove all songs in favourite playlist
     public void RemoveAll (View view){
         album.favlist.clear();
         songAdapter.notifyDataSetChanged();

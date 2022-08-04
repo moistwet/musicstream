@@ -86,7 +86,7 @@
                 android:text="Boy With Luv"
                 android:textColor="#E3DEDE"
                 android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@+id/S1009"
+                app:layout_constraintStart_toEndOf="@+id/S1002"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
             <ImageButton
@@ -122,7 +122,7 @@
                 android:onClick="handleSelection"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/S1009"
+                app:layout_constraintTop_toBottomOf="@+id/S1002"
                 app:srcCompat="@drawable/blackswancover" />
 
             <TextView
@@ -150,7 +150,7 @@
                 app:srcCompat="@drawable/butter" />
 
             <ImageButton
-                android:id="@+id/S1009"
+                android:id="@+id/S1002"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="25dp"

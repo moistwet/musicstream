@@ -44,6 +44,7 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
 
     @Override
     public void onBindViewHolder(@NonNull Myview holder, @SuppressLint("RecyclerView") int position) {
+        //replaces titleArtist, titleTxt and image button to selected song titleArtist titleTxt and image button thats added in playlist
         Song song = songsFiltered.get(position);
         TextView artist = holder.titleArtist;
         artist.setText(song.getArtiste());
@@ -53,8 +54,11 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
         holder.image.setImageResource(imageId);
         holder.removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
+            //onclick function of remove button
             public void onClick(View view) {
+                //removes position of song id that remove button is linked to
                 album.favlist.remove(position);
+                //updates json to new favlist after removal of position of song id
                 Gson gson = new Gson();
                 String json = gson.toJson(album.favlist);
                 SharedPreferences.Editor editor = album.sharedPreferences.edit();
@@ -83,10 +87,12 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 String charString = constraint.toString();
+                //if no input, songs filtered equals all songs
                 if(charString.isEmpty()){
                     songsFiltered=songs;
                 }
                 else {
+                    //if there is input, get songs that are under input for title
                     List<Song> filteredList = new ArrayList<Song>();
                     for (int i = 0; i < songs.size(); i++) {
                         if (songs.get(i).getTitle().toLowerCase().contains(charString.toLowerCase())){
@@ -103,6 +109,7 @@ public class SongAdapter extends RecyclerView.Adapter<Myview> implements Filtera
             }
 
             @Override
+            //changes list to results of search
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 songsFiltered = (List<Song>) results.values;
                 notifyDataSetChanged();

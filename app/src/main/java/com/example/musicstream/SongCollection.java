@@ -5,6 +5,7 @@ import static com.example.musicstream.album.favlist;
 import android.util.Log;
 
 public class SongCollection {
+    //big list of all the songs in the app
     public static Song[] songs = new Song[34];
             public SongCollection() {
                 //be album
@@ -193,12 +194,13 @@ public class SongCollection {
 
 
 
-
+    //gets current song ID
     public Song getCurrentSong(int currentSongId){
 
         return songs[currentSongId] ;
     }
 
+    //searches the song id
     public int searchSongById(String id)
     {
         for(int index = 0; index < songs.length; index++)
@@ -211,6 +213,8 @@ public class SongCollection {
         }
         return -1;
     }
+
+    //searches the songs id
     public static Song searchById(String id){
         Song tempSong = null;
         for (int i = 0; i < songs.length; i++) {
@@ -223,6 +227,7 @@ public class SongCollection {
         return tempSong;
     }
 
+    //gets the next song id
     public int getNextSong(int currentSongIndex){
         if (currentSongIndex >= songs.length-1){
             return currentSongIndex;
@@ -232,6 +237,7 @@ public class SongCollection {
         }
     }
 
+    //gets the previous song id
     public int getPrevSong(int currentSongIndex){
         if( currentSongIndex <= 0){
             return currentSongIndex;
