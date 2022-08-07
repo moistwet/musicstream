@@ -12,21 +12,25 @@
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="75dp"
         android:text="Ganadara"
         android:textColor="#EFDFDF"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintStart_toEndOf="@+id/S1018"
+        app:layout_constraintTop_toBottomOf="@+id/textView51" />
 
     <TextView
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="56dp"
         android:text="All I Wanna Do"
         android:textColor="#EFDFDF"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintStart_toEndOf="@+id/S1017"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <ImageView
         android:id="@+id/S1017"
@@ -66,9 +70,11 @@
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="206dp"
         android:text="Jay Park"
         android:textColor="#EFDFDF"
         android:textSize="23sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="206dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

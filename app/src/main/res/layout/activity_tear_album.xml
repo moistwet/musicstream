@@ -147,7 +147,7 @@
                 android:layout_marginTop="48dp"
                 android:text="So What"
                 android:textColor="#F3EEEE"
-                app:layout_constraintStart_toEndOf="@+id/S1034"
+                app:layout_constraintStart_toEndOf="@+id/S1001"
                 app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
             <ImageView
@@ -172,7 +172,7 @@
                 app:srcCompat="@drawable/tear" />
 
             <ImageView
-                android:id="@+id/S1034"
+                android:id="@+id/S1001"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"

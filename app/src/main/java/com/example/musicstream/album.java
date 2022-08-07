@@ -67,6 +67,7 @@ public class album extends AppCompatActivity {
     }
 
     public void handleSelection(View myView) {
+        //gets image id
         String resourceId = getResources().getResourceEntryName(myView.getId());
         int currentArrayIndex = songCollection.searchSongById(resourceId);
         Log.d("ALERT", "The current array position is: " + currentArrayIndex);
@@ -74,6 +75,8 @@ public class album extends AppCompatActivity {
     }
 
     public void sendDataToActivity(int index){
+        //sends data to PlaySongActivity
+        //leads to PlaySongActivity from whatever activity the user is in
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);
         startActivity(intent);
@@ -92,10 +95,6 @@ public class album extends AppCompatActivity {
     public void personaalbumpage(View myView)
     {
         setContentView(R.layout.activity_persona_album);
-    }
-    public void bealbumpage(View myView)
-    {
-        setContentView(R.layout.activity_be_album);
     }
     public void thursdayschildalbumpage(View myView) { setContentView(R.layout.activity_thursdayschild);}
     public void tearalbumpage(View myView) { setContentView(R.layout.activity_tear_album);}

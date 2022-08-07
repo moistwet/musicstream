@@ -49,7 +49,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/S1015"
+                android:id="@+id/S1001"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="28dp"
@@ -57,7 +57,7 @@
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/butter" />
+                app:srcCompat="@drawable/persona" />
 
             <ImageView
                 android:id="@+id/S1001"
@@ -67,7 +67,7 @@
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/lifegoeson" />
+                app:srcCompat="@drawable/persona" />
 
             <TextView
                 android:id="@+id/textView25"
@@ -75,7 +75,7 @@
                 android:layout_height="27dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Life goes on"
+                android:text="Persona"
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/S1001"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -99,7 +99,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Bts"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/S1015"
+                app:layout_constraintStart_toEndOf="@+id/S1001"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
             <TextView
@@ -110,7 +110,7 @@
                 android:layout_marginTop="19dp"
                 android:text="Bts"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/S1002"
+                app:layout_constraintStart_toEndOf="@+id/S1009"
                 app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
             <TextView
@@ -130,20 +130,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="53dp"
-                android:text="Butter"
+                android:text="Persona instrument boosted"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/S1015"
+                app:layout_constraintStart_toEndOf="@+id/S1001"
                 app:layout_constraintTop_toBottomOf="@+id/textView101" />
 
             <ImageView
                 android:id="@+id/S1016"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="132dp"
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/S1015"
+                app:layout_constraintTop_toBottomOf="@+id/S1001"
                 app:srcCompat="@drawable/blackswancover" />
 
             <ImageView
@@ -158,7 +158,7 @@
                 app:srcCompat="@drawable/staythisway" />
 
             <ImageView
-                android:id="@+id/S1002"
+                android:id="@+id/S1009"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="29dp"
@@ -187,7 +187,7 @@
                 android:layout_marginTop="54dp"
                 android:text="Boy With Luv"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/S1002"
+                app:layout_constraintStart_toEndOf="@+id/S1009"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
             <TextView

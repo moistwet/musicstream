@@ -6,7 +6,7 @@ import android.util.Log;
 
 public class SongCollection {
     //big list of all the songs in the app
-    public static Song[] songs = new Song[34];
+    public static Song[] songs = new Song[35];
             public SongCollection() {
                 //be album
                 Song lifegoeson = new Song("S1001", "1.Life goes on", "BTS",
@@ -151,6 +151,15 @@ public class SongCollection {
                         "https://p.scdn.co/mp3-preview/d2ac125318a419e49b05dbbf5066571c69f04948?cid=2afe87a64b0042dabf51f37318616965",
                         5.09, R.drawable.tear);
 
+                //mainactivity song
+                Song withyou = new Song("S1035", "With you", "Jimin," ,
+                        "https://p.scdn.co/mp3-preview/18c4ba2c0beb02ff740b720075d8a71e5af51101?cid=2afe87a64b0042dabf51f37318616965",
+                                3.37, R.drawable.withyou);
+
+
+
+
+
 
 
 
@@ -188,6 +197,7 @@ public class SongCollection {
                 songs[31]= airplanept2;
                 songs[32]= anpanman;
                 songs[33]= sowhat;
+                songs[34]= withyou;
 
 
             }

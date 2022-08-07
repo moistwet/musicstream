@@ -12,7 +12,6 @@
         android:layout_height="80dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="36dp"
-        android:onClick="handleSelection"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/alliwanttodo" />

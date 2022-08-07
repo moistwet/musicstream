@@ -32,6 +32,7 @@ public class PlaySongActivity extends AppCompatActivity {
     private SongCollection songCollection = new SongCollection();
     private SongCollection originalsongCollection = new SongCollection();
     List<Song> shufflelist = Arrays.asList(songCollection.songs);
+    //calling buttons to use for progess bar, repeat button and shuffle button
     SeekBar seekBar;
     Handler handler = new Handler();
     Button repeatBtn;

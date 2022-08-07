@@ -110,16 +110,6 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/persona" />
 
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="368dp"
-                        android:layout_marginTop="16dp"
-                        android:onClick="bealbumpage"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/lifegoeson" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
 
