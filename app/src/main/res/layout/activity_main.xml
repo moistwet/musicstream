@@ -49,7 +49,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/S1001"
+                android:id="@+id/S1008"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="28dp"
@@ -60,7 +60,7 @@
                 app:srcCompat="@drawable/persona" />
 
             <ImageView
-                android:id="@+id/S1001"
+                android:id="@+id/S1008"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="25dp"
@@ -77,7 +77,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Persona"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/S1001"
+                app:layout_constraintStart_toEndOf="@+id/S1008"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -88,7 +88,7 @@
                 android:layout_marginTop="9dp"
                 android:text="Bts"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/S1001"
+                app:layout_constraintStart_toEndOf="@+id/S1008"
                 app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Bts"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/S1001"
+                app:layout_constraintStart_toEndOf="@+id/S1008"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
             <TextView
@@ -132,7 +132,7 @@
                 android:layout_marginTop="53dp"
                 android:text="Persona instrument boosted"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/S1001"
+                app:layout_constraintStart_toEndOf="@+id/S1008"
                 app:layout_constraintTop_toBottomOf="@+id/textView101" />
 
             <ImageView
@@ -143,7 +143,7 @@
                 android:layout_marginTop="132dp"
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/S1001"
+                app:layout_constraintTop_toBottomOf="@+id/S1008"
                 app:srcCompat="@drawable/blackswancover" />
 
             <ImageView

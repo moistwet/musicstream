@@ -80,35 +80,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/persona" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="61dp"
         android:layout_height="28dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="93dp"
         android:text="BTS"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:text="persona :map of the soul "
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
@@ -179,7 +169,7 @@
         app:srcCompat="@drawable/persona" />
 
     <ImageView
-        android:id="@+id/S1001"
+        android:id="@+id/S1008"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -194,10 +184,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="36dp"
         android:text="Persona"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/textView6"
@@ -260,17 +250,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView
-        android:id="@+id/S1001"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="116dp"
-        android:onClick="handleSelection"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play" />
-
-    <ImageView
         android:id="@+id/add1"
         android:layout_width="46dp"
         android:layout_height="44dp"
@@ -281,5 +260,15 @@
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/persona"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
